@@ -1,22 +1,18 @@
 input1, options = ARGV
 
-lett = Array.new
-code = []
-input1.each_char do |l|
-	lett << l
-end
-code = lett[0..2]
-alpha = []
+alphabet = []
 ("a".."z").each do |char|
-	alpha << char
+	alphabet << char
 end
-new_char = []
-code.each do |x|
-	new_char << alpha.index(x).to_s
+
+input1 = input1[0..2].split("")
+letter_number = []
+input1.each do |x|
+	letter_number << alphabet.index(x).to_s
 end
-new_char.each do |y|
+letter_number.each do |y|
 	if y.each_char.count < 2
 		y = y.insert(0, "0")
 	end
 end
-puts new_char.join('.')
+puts letter_number.join('.')
