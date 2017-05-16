@@ -7,13 +7,11 @@ alphabet = []
 end
 
 # Grab first 3 letters of input
-input1 = input1[0..2].split("")
+input1 = input1.chars.first(3)
 
 # Get numerical value for letters from index of letter in alphabet
 char_num = []
-input1.each do |x|
-	char_num << alphabet.index(x).to_s
-end
+input1.each{ |x| char_num << alphabet.index(x).to_s }
 
 # Format letter value so that it is always two digits
 char_num.each do |y|
