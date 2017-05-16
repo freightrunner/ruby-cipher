@@ -1,4 +1,7 @@
-input1, options = ARGV
+input1, metric = ARGV
+
+# Set metric ARGV to 3 if user does not supply one
+metric = 3 if metric.nil?
 
 #create an array of the alphabet
 alphabet = []
@@ -6,8 +9,8 @@ alphabet = []
 	alphabet << char
 end
 
-# Grab first 3 letters of input
-input1 = input1.chars.first(3)
+# Grab number of letters specified in metric ARGV
+input1 = input1.chars.first(metric.to_i)
 
 # Get numerical value for letters from index of letter in alphabet
 char_num = []
