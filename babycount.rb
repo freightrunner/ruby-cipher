@@ -1,6 +1,6 @@
 present = Time.now
 
-due_date = Time.local(2017, 11, 19)
+due_date = Time.local(2017, 10, 19)
 
 countdown = due_date - present
 
