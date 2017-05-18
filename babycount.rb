@@ -19,4 +19,4 @@ diff = diff % HOUR
 minutes_left = diff / MINUTE
 
 
-puts "Days Until #{due_date.strftime("%A %B %d")}th : #{days_left.to_i} days, #{hours_left.to_i} hours, #{minutes_left.to_i} minutes"
+puts "Days Until Due Date (#{due_date.strftime("%A %B %d")}th) : #{days_left.to_i} days, #{hours_left.to_i} hours, #{minutes_left.to_i} minutes"
